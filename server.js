@@ -50,7 +50,7 @@ app.use(
 );
 
 app.get("/", checkAuthenticated, (req, res) => {
-  res.redirect("https://private-chat-app.herokuapp.com/") || process.env.PORT;
+  res.redirect("https://private-chat-app.herokuapp.com/");
 });
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
@@ -110,7 +110,7 @@ function checkNotAuthenticated(req, res, next) {
   }
   next();
 }
-
+const PORT = process.env.PORT || 3000;
 app.listen(3000, () => {
   console.log("Server started on port 3000");
 });
