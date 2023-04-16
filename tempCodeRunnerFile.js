@@ -110,9 +110,9 @@ function checkNotAuthenticated(req, res, next) {
   }
   next();
 }
-const PORT = process.env.PORT || 4000;
-app.listen(4000, () => {
-  console.log("Server started on port 4000");
+const PORT = process.env.PORT || 3000;
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
 });
 
 // if (process.env.NODE_ENV !== "production") {
